@@ -1,0 +1,11 @@
+def closure_list():
+    total = [0]
+    def inner(value):
+        total[0]+= value
+        return total[0]
+    return inner
+
+closure = closure_list()
+print(closure(6))
+print(closure(9))
+print(closure(15))
